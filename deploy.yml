@@ -1,0 +1,14 @@
+---
+- name: Execute deploy_lamp.sh on the slave node
+  hosts: slave
+  become: true
+
+  tasks:
+    - name: Copy deploy_lamp.sh to the Slave node
+      copy:
+        src: deploy_lamp.sh
+        dest: /home/vagrant/deploy_lamp.sh
+        mode: '0755'
+
+    - name: Execute deploy_lamp.sh on the Slave node
+      shell: /home/vagrant/deploy_lamp.sh
