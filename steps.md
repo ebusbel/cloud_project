@@ -38,6 +38,7 @@ sudo apt-get install -y apache2 mysql-server php libapache2-mod-php php-mysql
 
 # Clone the PHP application from GitHub
 git clone https://github.com/laravel/laravel.git
+![laravel](screenshots/apache%20Screenshot%202023-10-27%20144953%20apache%20home-page%20(1).png)
 
 # Configure Apache web server
 sudo mv laravel /var/www/html/
@@ -82,7 +83,7 @@ Step 4: Verifying PHP Application Accessibility
 2. Run the Ansible playbook using the command ansible-playbook -i "Slave," deploy.yml.
 3. After the playbook finishes executing, i opened my web browser and enter the Slave node's IP address to access the PHP application.
 4. Take a screenshot as evidence.
-5. ![php verification](screenshots/php%20Screenshot%202023-10-23%20015120%20my%20apache%20verification%20page.png)
+5. ![php verification](screenshots/apache%20home%20page%20Screenshot%202023-10-27%20150039.png)
 
 Step 5: Creating a Cron Job to Check Server Uptime
 1. I SSH into the Slave node using vagrant ssh Slave.
